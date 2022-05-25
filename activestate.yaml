@@ -16,7 +16,7 @@ scripts:
   - name: artifactory-sync
     language: bash
     value: |
-      eccho Loreli change this to whatever pip command you use to publish to artifactory
+      echo Loreli change this to whatever pip command you use to publish to artifactory
       #pip 
 
 events:
