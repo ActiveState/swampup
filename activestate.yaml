@@ -1,0 +1,26 @@
+project: https://platform.activestate.com/scottr/swampup?branch=main&commitID=993883ab-afac-4478-8900-9992c21664a6
+
+scripts:
+  - name: activationMessage
+    language: python3
+    value: |
+      # -*- coding: utf-8 -*-
+      import textwrap
+      print(textwrap.dedent("""
+        Quick Start
+        ───────────
+        • To add a package to your runtime, type "state install <package name>"
+        • To publish to your artifactory instance run "artifactory-sync"
+        • Learn more about how to use the State Tool, type "state learn"
+      """))
+  - name: artifactory-sync
+    language: bash
+    value: |
+      eccho Loreli change this to whatever pip command you use to publish to artifactory
+      #pip 
+
+events:
+  # This is the ACTIVATE event, it will run whenever a new virtual environment is created (eg. by running `state activate`)
+  # On Linux and macOS this will be ran as part of your shell's rc file, so you can use it to set up aliases, functions, environment variables, etc.
+  - name: ACTIVATE
+    value: python3 $scripts.activationMessage.path()
