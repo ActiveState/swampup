@@ -1,4 +1,4 @@
-project: https://platform.activestate.com/scottr/swampup?branch=main&commitID=993883ab-afac-4478-8900-9992c21664a6
+project: https://platform.activestate.com/scottr/swampup?branch=main&commitID=dcb0d125-08c8-410a-bd89-cce25339199f
 
 scripts:
   - name: activationMessage
@@ -13,11 +13,11 @@ scripts:
         • To publish to your artifactory instance run "artifactory-sync"
         • Learn more about how to use the State Tool, type "state learn"
       """))
-  - name: artifactory-sync
+  - name: artifactory-install
     language: bash
     value: |
       #echo Loreli change this to whatever pip command you use to publish to artifactory
-      pip install -i https://asuser:AP4jP7nxrrVhCVFNjBvfcbt69us@activestate2.jfrog.io/artifactory/api/pypi/test1-remote/simple colorama
+      pip install -i https://asuser:AP4jP7nxrrVhCVFNjBvfcbt69us@activestate2.jfrog.io/artifactory/api/pypi/test1-remote/simple $@
 
 events:
   # This is the ACTIVATE event, it will run whenever a new virtual environment is created (eg. by running `state activate`)
