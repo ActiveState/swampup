@@ -17,7 +17,7 @@ scripts:
     language: bash
     value: |
       #echo Loreli change this to whatever pip command you use to publish to artifactory
-      pip install -i https://asuser:AP4jP7nxrrVhCVFNjBvfcbt69us@activestate2.jfrog.io/artifactory/api/pypi/test1-remote/simple $@
+      pip install -i https://scottr:AP9a7583BZknFsWXrm4bb9YsXjq@activestate2.jfrog.io/artifactory/api/pypi/swampup-activestate-remote/simple $@
 
 events:
   # This is the ACTIVATE event, it will run whenever a new virtual environment is created (eg. by running `state activate`)
